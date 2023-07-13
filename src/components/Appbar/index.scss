@@ -1,0 +1,64 @@
+@import '../../helpers/colors.scss';
+
+@mixin flexBox(){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    
+}
+
+
+@media (max-width: 480px) {
+    .appbar{
+        position: absolute;
+        width: 100%;
+        background-color: $primary-green;
+        height: 70px;
+        box-shadow: 0px 1px 10px grey;
+        @include flexBox();
+        .menuSocial{
+            .itensMenuSocial{
+                display: inline;
+                margin-left: 30px;
+                margin-right: 30px;
+            }
+        }
+    }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+    .appbar{
+        position: absolute;
+        width: 100%;
+        background-color: $primary-green;
+        height: 70px;
+        box-shadow: 0px 1px 10px grey;
+        @include flexBox();
+        .menuSocial{
+            .itensMenuSocial{
+                display: inline;
+                margin-left: 30px;
+                margin-right: 30px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1025px) {
+    .appbar{
+        // position: relative;
+        width: 100%;
+        background-color: $primary-green;
+        height: 70px;
+        box-shadow: 0px 1px 10px grey;
+        @include flexBox();
+        .menuSocial{
+            .itensMenuSocial{
+                display: inline;
+                margin-left: 30px;
+                margin-right: 30px;
+            }
+        }
+    }
+}

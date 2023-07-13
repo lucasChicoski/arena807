@@ -1,0 +1,65 @@
+
+@mixin card-config(){
+    .card-content{
+        width: 250px;
+        background-color: #cad2c5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 20px;
+        border-radius: 10px;
+
+        // -webkit-animation-name: up;
+        // -webkit-animation-duration:1s;
+        // -webkit-animation-fill-mode: none;
+        // animation-fill-mode:none;
+        // animation-duration:1s;
+        // animation-name: down
+    }
+}
+
+
+
+@mixin box-shadown(){
+    .card-content:hover{
+        box-shadow: 1px 1px 10px black;
+        transition: 1s;
+        -webkit-animation-name: up;
+        -webkit-animation-duration:1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode:forwards;
+        animation-duration:1s;
+        animation-name: up
+        
+    }
+}
+
+@media (max-width: 480px) {
+    @include card-config();
+}
+@media (min-width: 481px) and (max-width: 1024px) {
+    @include card-config();
+}
+@media (min-width: 1025px) {
+    @include card-config();
+    @include box-shadown();
+    
+    @keyframes up {
+        0% {
+            transform: translateY(0px);
+        }
+        100% {
+            transform: translateY(-70px);
+        }
+    }
+    @keyframes down {
+        0% {
+            transform: translateY(-150px);
+        }
+        100% {
+            transform: translateY(0px);
+        }
+    }
+}
+
